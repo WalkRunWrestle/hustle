@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>The Hustle 17K</title>
+<title>The Hustle 42K</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -667,8 +667,8 @@ button:hover{ filter:brightness(1.06); }
 
 <section id="auth">
   <div class="loginCard">
-    <h1 class="loginTitle">THE HUSTLE 17K</h1>
-    <div class="loginSub">Enter your login code to track your The Hustle 17K progress.</div>
+    <h1 class="loginTitle">THE HUSTLE 42K</h1>
+    <div class="loginSub">Enter your login code to track your The Hustle 42K progress.</div>
 
     <div class="fieldWrap">
       <input id="accessCode" placeholder="Login code" autocomplete="one-time-code" />
@@ -687,7 +687,7 @@ button:hover{ filter:brightness(1.06); }
 <section id="splash" style="display:none">
   <div class="splashWrap">
     <div class="brandStack">
-      <div class="brandTitle">The Hustle 17K</div>
+      <div class="brandTitle">The Hustle 42K</div>
       <div class="brandTag">walk, run, wrestle</div>
       <div class="brandSite">WRW.COM</div>
     </div>
@@ -708,7 +708,7 @@ button:hover{ filter:brightness(1.06); }
       </div>
     </div>
 
-<div id="splashProgress" class="progressLine">Progress: 0.00 / 17.00 km</div>
+<div id="splashProgress" class="progressLine">Progress: 0.00 / 42.00 km</div>
     <div class="nextLine">Tap Continue to open the map and log your distance.</div>
     <div class="localNotice">
       <strong>Progress saved on your device</strong>
@@ -726,7 +726,7 @@ button:hover{ filter:brightness(1.06); }
 <!-- RUN -->
 <section id="run" style="display:none; justify-content:flex-start;">
   <div class="topBar">
-    <div class="topTitle">The Hustle 17K</div>
+    <div class="topTitle">The Hustle 42K</div>
     <div class="topSub"></div>
   </div>
 
@@ -745,7 +745,7 @@ button:hover{ filter:brightness(1.06); }
   <div class="progressCard">
     <div class="progressTop">
       <div class="progressLabel">Progress</div>
-      <div class="progressValue"><span id="total">0.00</span> / 17.00 km</div>
+      <div class="progressValue"><span id="total">0.00</span> / 42.00 km</div>
     </div>
     <div class="bar"><div id="barFill" class="barFill"></div></div>
 
@@ -778,7 +778,7 @@ button:hover{ filter:brightness(1.06); }
 
   <div class="controlsCard">
         <div class="btnRow">
-      <button class="quickBtn" onclick="requestQuick(1, this)">+1 km</button>
+      <button class="quickBtn" onclick="requestQuick(2.5, this)">+2.5 km</button>
     </div>
 
     <div class="bottomRow">
@@ -802,7 +802,7 @@ button:hover{ filter:brightness(1.06); }
 
     <div class="finishTitle">WELL DONE!</div>
     <p class="finishSub">
-      <b id="finishUser">You</b> completed <b>The Hustle 17K</b>
+      <b id="finishUser">You</b> completed <b>The Hustle 42K</b>
     </p>
 
     <div class="finishStats">
@@ -847,7 +847,7 @@ button:hover{ filter:brightness(1.06); }
     </div>
 
     <ul style="margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:13px; line-height:1.45;">
-      <li>Use the <b>+1 km</b> button each time you complete a 1 km session (17 times total).</li>
+      <li>Use the <b>+2.5 km</b> button each time you complete a 1 km session (17 times total).</li>
       <li>Your progress <b>auto-saves on this device</b>.</li>
       <li><b>Send proof</b> opens an email draft — please attach <b>screenshots and/or proof</b> before sending.</li>
       <li><b>Map is locked by default</b> so the page scrolls. Tap <b>Unlock map</b> to move/zoom it.</li>
@@ -865,33 +865,59 @@ button:hover{ filter:brightness(1.06); }
 <script>
 /* ACCESS */
 const ACCESS_CODE = "Hustle1";
-const RACE_NAME = "The Hustle 17K";
+const RACE_NAME = "The Hustle 42K";
 
 /* Run rules */
-const CHALLENGE_KM = 17;
-const MAP_ROUTE_KM = 51;               // hidden (ratio 1k logged = 3k on map)
+const CHALLENGE_KM = 42;
+const MAP_ROUTE_KM = 126;               // hidden (ratio 1k logged = 3k on map)
 const TARGET_ROUTE_METERS = MAP_ROUTE_KM * 1000;
 const POPUP_DELAY_MS = 5000;
 
 const refs = [
-  "1km: Hustle. Loyalty. Respect. Let’s go.",
-  "2km: Keep it clean — consistency wins.",
-  "3km: You can’t see me… but you can feel the grind.",
-  "4km: Stay sharp. Stay steady.",
-  "5km: Halfway to 10? Nah — you’re building a legacy.",
-  "6km: One more rep. One more round.",
-  "7km: Pace locked. Head up.",
-  "8km: No shortcuts. Just hustle.",
-  "9km: You’ve done the hard part — keep stacking.",
-  "10km: Double digits. Champion mindset.",
-  "11km: Breathe. Reset. Push on.",
-  "12km: Respect the work — finish the job.",
-  "13km: Momentum is yours now.",
-  "14km: Pain is temporary. Pride is forever.",
-  "15km: Final stretch prep — stay in it.",
-  "16km: One left. Empty the tank.",
-  "17km: 🏁 THE HUSTLE COMPLETE — YOU DID IT."
+  '1km: 🔥 You’ve started — keep it moving!',
+  '2km: 👊 Keep showing up — that’s the Hustle.',
+  '3km: 👊 Keep showing up — that’s the Hustle.',
+  '4km: 👊 Keep showing up — that’s the Hustle.',
+  '5km: 💪 Big milestone — stay in the fight!',
+  '6km: 👊 Keep showing up — that’s the Hustle.',
+  '7km: 👊 Keep showing up — that’s the Hustle.',
+  '8km: 👊 Keep showing up — that’s the Hustle.',
+  '9km: 👊 Keep showing up — that’s the Hustle.',
+  '10km: 💪 Big milestone — stay in the fight!',
+  '11km: 👊 Keep showing up — that’s the Hustle.',
+  '12km: 👊 Keep showing up — that’s the Hustle.',
+  '13km: 👊 Keep showing up — that’s the Hustle.',
+  '14km: 👊 Keep showing up — that’s the Hustle.',
+  '15km: 💪 Big milestone — stay in the fight!',
+  '16km: 👊 Keep showing up — that’s the Hustle.',
+  '17km: 👊 Keep showing up — that’s the Hustle.',
+  '18km: 👊 Keep showing up — that’s the Hustle.',
+  '19km: 👊 Keep showing up — that’s the Hustle.',
+  '20km: 💪 Big milestone — stay in the fight!',
+  '21km: 🏁 Halfway(ish) — you’ve got real momentum now.',
+  '22km: 👊 Keep showing up — that’s the Hustle.',
+  '23km: 👊 Keep showing up — that’s the Hustle.',
+  '24km: 👊 Keep showing up — that’s the Hustle.',
+  '25km: 💪 Big milestone — stay in the fight!',
+  '26km: 👊 Keep showing up — that’s the Hustle.',
+  '27km: 👊 Keep showing up — that’s the Hustle.',
+  '28km: 👊 Keep showing up — that’s the Hustle.',
+  '29km: 👊 Keep showing up — that’s the Hustle.',
+  '30km: 💪 Big milestone — stay in the fight!',
+  '31km: 👊 Keep showing up — that’s the Hustle.',
+  '32km: 👊 Keep showing up — that’s the Hustle.',
+  '33km: 👊 Keep showing up — that’s the Hustle.',
+  '34km: 👊 Keep showing up — that’s the Hustle.',
+  '35km: 💪 Big milestone — stay in the fight!',
+  '36km: 👊 Keep showing up — that’s the Hustle.',
+  '37km: 👊 Keep showing up — that’s the Hustle.',
+  '38km: 👊 Keep showing up — that’s the Hustle.',
+  '39km: 👊 Keep showing up — that’s the Hustle.',
+  '40km: 💪 Big milestone — stay in the fight!',
+  '41km: 👊 Keep showing up — that’s the Hustle.',
+  '42km: 🏆 THE HUSTLE COMPLETE — absolutely unreal.'
 ];
+
 
 function getData(){ return JSON.parse(localStorage.getItem("hustle_users") || "{}"); }
 function saveData(d){ localStorage.setItem("hustle_users", JSON.stringify(d)); }
