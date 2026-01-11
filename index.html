@@ -323,6 +323,7 @@
     z-index:9999;
     padding:16px;
   }
+  .overlay.show{ display:flex !important; }
   .card{
     width:min(92vw, 720px);
     background:var(--panel);
@@ -1649,9 +1650,10 @@ function showFinish(){
   document.getElementById("finishTotal").textContent = total;
   document.getElementById("finishWhen").textContent = whenNice;
 
-  document.getElementById("finishOverlay").style.display = "flex";
+  const fo = document.getElementById("finishOverlay");
+  if (fo){ fo.classList.add("show"); fo.style.display = "flex"; }
 }
-function closeFinish(){ document.getElementById("finishOverlay").style.display = "none"; }
+function closeFinish(){ const fo=document.getElementById("finishOverlay"); if(fo){ fo.classList.remove("show"); fo.style.display="none"; } }
 
 /* ===== Map comes back after leaving to email ===== */
 function refreshMapAfterReturn(){
