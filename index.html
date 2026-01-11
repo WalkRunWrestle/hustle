@@ -1472,7 +1472,8 @@ function requestLogFromInputConfirm(btn){
   if (btn && btn.dataset && btn.dataset.busy === "1") return;
   if (btn && btn.dataset) btn.dataset.busy = "1";
 
-  const v = parseKmInput(document.getElementById("input").value);
+  const inputEl = document.getElementById("input");
+  const v = parseKmInput(inputEl ? inputEl.value : "");
   if (!v || v <= 0) return;
   requestLogWithConfirm(v);
   if (btn && btn.dataset) setTimeout(()=>{ btn.dataset.busy = "0"; }, 900);
@@ -1554,7 +1555,8 @@ function doLog(addKm){
 
   showToast(`Added +${addKm.toFixed(2)} km`, 1100);
 
-  document.getElementById("input").value = "";
+  const inputElClear = document.getElementById("input");
+  if (inputElClear) inputElClear.value = "";
   updateUndoButtonState();
 
   for (let k = Math.floor(before)+1; k <= Math.floor(after); k++){
